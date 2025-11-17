@@ -1,0 +1,1079 @@
+[
+  {
+    "timestamp": "2025-11-13T15:21:14.442436",
+    "n_processes": 1,
+    "local_queries": 409,
+    "boundary_queries": 123,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T15:21:15.718273",
+    "n_processes": 1,
+    "local_queries": 409,
+    "boundary_queries": 123,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T15:22:54.855970",
+    "n_processes": 1,
+    "local_queries": 798,
+    "boundary_queries": 2,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T15:22:56.910218",
+    "n_processes": 2,
+    "local_queries": 619,
+    "boundary_queries": 181,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T15:22:58.872542",
+    "n_processes": 4,
+    "local_queries": 441,
+    "boundary_queries": 359,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T15:23:00.905230",
+    "n_processes": 8,
+    "local_queries": 597,
+    "boundary_queries": 203,
+    "training_counts": [
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125
+    ],
+    "min_points": 125,
+    "max_points": 125,
+    "avg_points": 125.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T17:52:49.014312",
+    "n_processes": 1,
+    "local_queries": 729,
+    "boundary_queries": 71,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-13T17:53:01.948010",
+    "n_processes": 2,
+    "local_queries": 441,
+    "boundary_queries": 359,
+    "training_counts": [
+      499,
+      501
+    ],
+    "min_points": 499,
+    "max_points": 501,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0040080160320641
+  },
+  {
+    "timestamp": "2025-11-13T17:53:08.751367",
+    "n_processes": 4,
+    "local_queries": 576,
+    "boundary_queries": 224,
+    "training_counts": [
+      222,
+      277,
+      252,
+      249
+    ],
+    "min_points": 222,
+    "max_points": 277,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.2477477477477477
+  },
+  {
+    "timestamp": "2025-11-13T17:53:17.835330",
+    "n_processes": 8,
+    "local_queries": 577,
+    "boundary_queries": 223,
+    "training_counts": [
+      22,
+      200,
+      176,
+      101,
+      93,
+      159,
+      180,
+      69
+    ],
+    "min_points": 22,
+    "max_points": 200,
+    "avg_points": 125.0,
+    "imbalance_ratio": 9.090909090909092
+  },
+  {
+    "timestamp": "2025-11-14T11:04:23.141958",
+    "n_processes": 1,
+    "local_queries": 729,
+    "boundary_queries": 71,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T11:04:27.254839",
+    "n_processes": 2,
+    "local_queries": 441,
+    "boundary_queries": 359,
+    "training_counts": [
+      499,
+      501
+    ],
+    "min_points": 499,
+    "max_points": 501,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0040080160320641
+  },
+  {
+    "timestamp": "2025-11-14T11:04:29.634848",
+    "n_processes": 4,
+    "local_queries": 576,
+    "boundary_queries": 224,
+    "training_counts": [
+      222,
+      277,
+      252,
+      249
+    ],
+    "min_points": 222,
+    "max_points": 277,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.2477477477477477
+  },
+  {
+    "timestamp": "2025-11-14T11:04:32.046053",
+    "n_processes": 8,
+    "local_queries": 577,
+    "boundary_queries": 223,
+    "training_counts": [
+      22,
+      200,
+      176,
+      101,
+      93,
+      159,
+      180,
+      69
+    ],
+    "min_points": 22,
+    "max_points": 200,
+    "avg_points": 125.0,
+    "imbalance_ratio": 9.090909090909092
+  },
+  {
+    "timestamp": "2025-11-14T13:28:17.967149",
+    "n_processes": 1,
+    "local_queries": 431,
+    "boundary_queries": 252,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T13:28:21.537834",
+    "n_processes": 2,
+    "local_queries": 602,
+    "boundary_queries": 81,
+    "training_counts": [
+      292,
+      707
+    ],
+    "min_points": 292,
+    "max_points": 707,
+    "avg_points": 499.5,
+    "imbalance_ratio": 2.421232876712329
+  },
+  {
+    "timestamp": "2025-11-14T13:28:23.865509",
+    "n_processes": 4,
+    "local_queries": 470,
+    "boundary_queries": 213,
+    "training_counts": [
+      151,
+      141,
+      431,
+      276
+    ],
+    "min_points": 141,
+    "max_points": 431,
+    "avg_points": 249.75,
+    "imbalance_ratio": 3.0567375886524824
+  },
+  {
+    "timestamp": "2025-11-14T13:28:26.401097",
+    "n_processes": 8,
+    "local_queries": 483,
+    "boundary_queries": 200,
+    "training_counts": [
+      25,
+      126,
+      94,
+      47,
+      196,
+      235,
+      179,
+      97
+    ],
+    "min_points": 25,
+    "max_points": 235,
+    "avg_points": 124.875,
+    "imbalance_ratio": 9.4
+  },
+  {
+    "timestamp": "2025-11-14T15:50:33.899565",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:50:36.078984",
+    "n_processes": 2,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:50:38.242486",
+    "n_processes": 4,
+    "local_queries": 161,
+    "boundary_queries": 39,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:50:40.799096",
+    "n_processes": 8,
+    "local_queries": 169,
+    "boundary_queries": 31,
+    "training_counts": [
+      250,
+      0,
+      236,
+      14,
+      5,
+      245,
+      0,
+      250
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 125.0,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-14T15:51:16.747892",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:51:18.912857",
+    "n_processes": 2,
+    "local_queries": 106,
+    "boundary_queries": 94,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:51:21.390013",
+    "n_processes": 4,
+    "local_queries": 155,
+    "boundary_queries": 45,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:51:23.960946",
+    "n_processes": 8,
+    "local_queries": 156,
+    "boundary_queries": 44,
+    "training_counts": [
+      250,
+      0,
+      203,
+      47,
+      3,
+      247,
+      0,
+      250
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 125.0,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-14T15:52:40.051378",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:52:42.164361",
+    "n_processes": 2,
+    "local_queries": 103,
+    "boundary_queries": 97,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:52:44.314905",
+    "n_processes": 4,
+    "local_queries": 170,
+    "boundary_queries": 30,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-14T15:52:46.887090",
+    "n_processes": 8,
+    "local_queries": 170,
+    "boundary_queries": 30,
+    "training_counts": [
+      250,
+      0,
+      238,
+      12,
+      11,
+      239,
+      1,
+      249
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 125.0,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-16T15:49:08.109581",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-16T15:49:10.945716",
+    "n_processes": 2,
+    "local_queries": 101,
+    "boundary_queries": 99,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-16T15:49:13.573727",
+    "n_processes": 4,
+    "local_queries": 151,
+    "boundary_queries": 49,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-16T15:49:16.491712",
+    "n_processes": 8,
+    "local_queries": 169,
+    "boundary_queries": 31,
+    "training_counts": [
+      250,
+      0,
+      243,
+      7,
+      10,
+      240,
+      0,
+      250
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 125.0,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-16T16:39:54.188324",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-16T16:39:57.029515",
+    "n_processes": 2,
+    "local_queries": 107,
+    "boundary_queries": 93,
+    "training_counts": [
+      500,
+      499
+    ],
+    "min_points": 499,
+    "max_points": 500,
+    "avg_points": 499.5,
+    "imbalance_ratio": 1.002004008016032
+  },
+  {
+    "timestamp": "2025-11-16T16:39:59.543187",
+    "n_processes": 4,
+    "local_queries": 182,
+    "boundary_queries": 18,
+    "training_counts": [
+      250,
+      250,
+      250,
+      249
+    ],
+    "min_points": 249,
+    "max_points": 250,
+    "avg_points": 249.75,
+    "imbalance_ratio": 1.0040160642570282
+  },
+  {
+    "timestamp": "2025-11-16T16:40:02.414648",
+    "n_processes": 8,
+    "local_queries": 167,
+    "boundary_queries": 33,
+    "training_counts": [
+      250,
+      0,
+      243,
+      7,
+      26,
+      224,
+      0,
+      249
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 124.875,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-16T16:45:43.637461",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-16T16:45:46.295940",
+    "n_processes": 2,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      500,
+      499
+    ],
+    "min_points": 499,
+    "max_points": 500,
+    "avg_points": 499.5,
+    "imbalance_ratio": 1.002004008016032
+  },
+  {
+    "timestamp": "2025-11-16T16:45:48.741950",
+    "n_processes": 4,
+    "local_queries": 166,
+    "boundary_queries": 34,
+    "training_counts": [
+      250,
+      250,
+      250,
+      249
+    ],
+    "min_points": 249,
+    "max_points": 250,
+    "avg_points": 249.75,
+    "imbalance_ratio": 1.0040160642570282
+  },
+  {
+    "timestamp": "2025-11-16T16:45:51.618367",
+    "n_processes": 8,
+    "local_queries": 168,
+    "boundary_queries": 32,
+    "training_counts": [
+      250,
+      0,
+      241,
+      9,
+      8,
+      242,
+      0,
+      249
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 124.875,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-17T12:13:06.524073",
+    "n_processes": 1,
+    "local_queries": 100,
+    "boundary_queries": 100,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T12:13:09.524237",
+    "n_processes": 2,
+    "local_queries": 101,
+    "boundary_queries": 99,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T12:13:12.465830",
+    "n_processes": 4,
+    "local_queries": 156,
+    "boundary_queries": 44,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T12:13:15.556428",
+    "n_processes": 8,
+    "local_queries": 159,
+    "boundary_queries": 41,
+    "training_counts": [
+      250,
+      0,
+      249,
+      1,
+      11,
+      239,
+      0,
+      250
+    ],
+    "min_points": 0,
+    "max_points": 250,
+    "avg_points": 125.0,
+    "imbalance_ratio": Infinity
+  },
+  {
+    "timestamp": "2025-11-17T13:41:35.721081",
+    "n_processes": 1,
+    "local_queries": 191,
+    "boundary_queries": 7,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T13:41:38.718428",
+    "n_processes": 2,
+    "local_queries": 126,
+    "boundary_queries": 72,
+    "training_counts": [
+      498,
+      502
+    ],
+    "min_points": 498,
+    "max_points": 502,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0080321285140563
+  },
+  {
+    "timestamp": "2025-11-17T13:41:42.436697",
+    "n_processes": 4,
+    "local_queries": 142,
+    "boundary_queries": 56,
+    "training_counts": [
+      68,
+      430,
+      428,
+      74
+    ],
+    "min_points": 68,
+    "max_points": 430,
+    "avg_points": 250.0,
+    "imbalance_ratio": 6.323529411764706
+  },
+  {
+    "timestamp": "2025-11-17T13:41:45.602212",
+    "n_processes": 8,
+    "local_queries": 139,
+    "boundary_queries": 59,
+    "training_counts": [
+      9,
+      59,
+      169,
+      261,
+      252,
+      176,
+      62,
+      12
+    ],
+    "min_points": 9,
+    "max_points": 261,
+    "avg_points": 125.0,
+    "imbalance_ratio": 29.0
+  },
+  {
+    "timestamp": "2025-11-17T13:45:06.292116",
+    "n_processes": 1,
+    "local_queries": 122,
+    "boundary_queries": 65,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T13:45:08.982123",
+    "n_processes": 2,
+    "local_queries": 102,
+    "boundary_queries": 85,
+    "training_counts": [
+      250,
+      750
+    ],
+    "min_points": 250,
+    "max_points": 750,
+    "avg_points": 500.0,
+    "imbalance_ratio": 3.0
+  },
+  {
+    "timestamp": "2025-11-17T13:45:11.821341",
+    "n_processes": 4,
+    "local_queries": 139,
+    "boundary_queries": 48,
+    "training_counts": [
+      220,
+      30,
+      76,
+      674
+    ],
+    "min_points": 30,
+    "max_points": 674,
+    "avg_points": 250.0,
+    "imbalance_ratio": 22.466666666666665
+  },
+  {
+    "timestamp": "2025-11-17T13:47:10.683275",
+    "n_processes": 1,
+    "local_queries": 191,
+    "boundary_queries": 7,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T13:47:14.386544",
+    "n_processes": 2,
+    "local_queries": 126,
+    "boundary_queries": 72,
+    "training_counts": [
+      498,
+      502
+    ],
+    "min_points": 498,
+    "max_points": 502,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0080321285140563
+  },
+  {
+    "timestamp": "2025-11-17T13:47:18.068344",
+    "n_processes": 4,
+    "local_queries": 142,
+    "boundary_queries": 56,
+    "training_counts": [
+      68,
+      430,
+      428,
+      74
+    ],
+    "min_points": 68,
+    "max_points": 430,
+    "avg_points": 250.0,
+    "imbalance_ratio": 6.323529411764706
+  },
+  {
+    "timestamp": "2025-11-17T13:47:21.790603",
+    "n_processes": 8,
+    "local_queries": 139,
+    "boundary_queries": 59,
+    "training_counts": [
+      9,
+      59,
+      169,
+      261,
+      252,
+      176,
+      62,
+      12
+    ],
+    "min_points": 9,
+    "max_points": 261,
+    "avg_points": 125.0,
+    "imbalance_ratio": 29.0
+  },
+  {
+    "timestamp": "2025-11-17T14:43:42.251899",
+    "n_processes": 1,
+    "local_queries": 191,
+    "boundary_queries": 7,
+    "training_counts": [
+      1000
+    ],
+    "min_points": 1000,
+    "max_points": 1000,
+    "avg_points": 1000.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T14:43:44.497046",
+    "n_processes": 2,
+    "local_queries": 128,
+    "boundary_queries": 70,
+    "training_counts": [
+      500,
+      500
+    ],
+    "min_points": 500,
+    "max_points": 500,
+    "avg_points": 500.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T14:43:46.903482",
+    "n_processes": 4,
+    "local_queries": 129,
+    "boundary_queries": 69,
+    "training_counts": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "min_points": 250,
+    "max_points": 250,
+    "avg_points": 250.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T14:43:49.578250",
+    "n_processes": 8,
+    "local_queries": 136,
+    "boundary_queries": 62,
+    "training_counts": [
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125
+    ],
+    "min_points": 125,
+    "max_points": 125,
+    "avg_points": 125.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T15:04:46.469451",
+    "n_processes": 1,
+    "local_queries": 428,
+    "boundary_queries": 4,
+    "training_counts": [
+      1726
+    ],
+    "min_points": 1726,
+    "max_points": 1726,
+    "avg_points": 1726.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T15:04:50.207562",
+    "n_processes": 2,
+    "local_queries": 303,
+    "boundary_queries": 129,
+    "training_counts": [
+      1409,
+      317
+    ],
+    "min_points": 317,
+    "max_points": 1409,
+    "avg_points": 863.0,
+    "imbalance_ratio": 4.444794952681388
+  },
+  {
+    "timestamp": "2025-11-17T15:04:55.766484",
+    "n_processes": 4,
+    "local_queries": 352,
+    "boundary_queries": 80,
+    "training_counts": [
+      58,
+      1351,
+      299,
+      18
+    ],
+    "min_points": 18,
+    "max_points": 1351,
+    "avg_points": 431.5,
+    "imbalance_ratio": 75.05555555555556
+  },
+  {
+    "timestamp": "2025-11-17T15:04:59.419943",
+    "n_processes": 8,
+    "local_queries": 269,
+    "boundary_queries": 163,
+    "training_counts": [
+      12,
+      46,
+      605,
+      746,
+      236,
+      63,
+      15,
+      3
+    ],
+    "min_points": 3,
+    "max_points": 746,
+    "avg_points": 215.75,
+    "imbalance_ratio": 248.66666666666666
+  },
+  {
+    "timestamp": "2025-11-17T15:12:54.083950",
+    "n_processes": 1,
+    "local_queries": 429,
+    "boundary_queries": 3,
+    "training_counts": [
+      1726
+    ],
+    "min_points": 1726,
+    "max_points": 1726,
+    "avg_points": 1726.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-17T15:12:57.953421",
+    "n_processes": 2,
+    "local_queries": 143,
+    "boundary_queries": 289,
+    "training_counts": [
+      1230,
+      496
+    ],
+    "min_points": 496,
+    "max_points": 1230,
+    "avg_points": 863.0,
+    "imbalance_ratio": 2.4798387096774195
+  },
+  {
+    "timestamp": "2025-11-17T15:13:02.083007",
+    "n_processes": 4,
+    "local_queries": 235,
+    "boundary_queries": 197,
+    "training_counts": [
+      25,
+      1205,
+      474,
+      22
+    ],
+    "min_points": 22,
+    "max_points": 1205,
+    "avg_points": 431.5,
+    "imbalance_ratio": 54.77272727272727
+  },
+  {
+    "timestamp": "2025-11-17T15:13:06.026079",
+    "n_processes": 8,
+    "local_queries": 321,
+    "boundary_queries": 111,
+    "training_counts": [
+      4,
+      21,
+      161,
+      1044,
+      398,
+      76,
+      17,
+      5
+    ],
+    "min_points": 4,
+    "max_points": 1044,
+    "avg_points": 215.75,
+    "imbalance_ratio": 261.0
+  }
+]
