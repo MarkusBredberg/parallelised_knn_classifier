@@ -1,0 +1,14 @@
+# Core numerical computing
+numpy>=1.21.0,<2.0.0
+
+# MPI for Python (parallel computing)
+mpi4py>=3.1.0
+
+# Plotting and visualization
+matplotlib>=3.5.0
+
+# Machine learning utilities
+scikit-learn>=1.0.0
+
+# Scientific computing (for orthogonal rotations)
+scipy>=1.7.0
