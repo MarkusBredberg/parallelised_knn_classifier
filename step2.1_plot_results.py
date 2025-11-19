@@ -17,7 +17,6 @@ import sys
 from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.patches import Rectangle
 
 def load_results(out_dir='./produced_data'):
     """
@@ -945,18 +944,18 @@ def create_all_prediction_visualizations(base_dir='./produced_data',
             n_procs = int(pred_file.stem.split('_')[1].replace('procs', ''))
             
             # Try both uniform and balanced
-            for balanced in [False, True]:
-                try:
-                    visualize_predictions_with_domains(
-                        n_procs=n_procs,
-                        base_dir=base_dir,
-                        scaling_mode='strong',
-                        balanced_partitioning=balanced,
-                        figure_dir=figure_dir
-                    )
-                except Exception as e:
-                    print(f"⚠ Warning: Could not create visualization for {n_procs} procs "
-                          f"({'balanced' if balanced else 'uniform'}): {e}")
+            #for balanced in [False, True]:
+            #    try:
+            #        visualize_predictions_with_domains(
+            #            n_procs=n_procs,
+            #            base_dir=base_dir,
+            #            scaling_mode='strong',
+            #            balanced_partitioning=balanced,
+            #            figure_dir=figure_dir
+            #        )
+            #    except Exception as e:
+            #        print(f"⚠ Warning: Could not create visualization for {n_procs} procs "
+            #              f"({'balanced' if balanced else 'uniform'}): {e}")
     
     # Check for weak scaling
     weak_dir = Path(f'{base_dir}/weak_scaling')

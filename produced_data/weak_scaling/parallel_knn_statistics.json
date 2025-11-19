@@ -1006,5 +1006,68 @@
     "max_points": 125,
     "avg_points": 125.0,
     "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-19T11:30:40.827394",
+    "n_processes": 1,
+    "local_queries": 20,
+    "boundary_queries": 5,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-19T11:30:43.340576",
+    "n_processes": 2,
+    "local_queries": 47,
+    "boundary_queries": 3,
+    "training_counts": [
+      292,
+      707
+    ],
+    "min_points": 292,
+    "max_points": 707,
+    "avg_points": 499.5,
+    "imbalance_ratio": 2.421232876712329
+  },
+  {
+    "timestamp": "2025-11-19T11:30:46.028835",
+    "n_processes": 4,
+    "local_queries": 66,
+    "boundary_queries": 34,
+    "training_counts": [
+      151,
+      141,
+      431,
+      276
+    ],
+    "min_points": 141,
+    "max_points": 431,
+    "avg_points": 249.75,
+    "imbalance_ratio": 3.0567375886524824
+  },
+  {
+    "timestamp": "2025-11-19T11:30:48.926002",
+    "n_processes": 8,
+    "local_queries": 145,
+    "boundary_queries": 55,
+    "training_counts": [
+      25,
+      126,
+      94,
+      47,
+      196,
+      235,
+      179,
+      97
+    ],
+    "min_points": 25,
+    "max_points": 235,
+    "avg_points": 124.875,
+    "imbalance_ratio": 9.4
   }
 ]

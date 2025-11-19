@@ -32,7 +32,6 @@ Usage:
 import subprocess
 import sys
 import argparse
-from pathlib import Path
 import time
 
 class Colors:

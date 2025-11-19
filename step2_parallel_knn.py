@@ -13,6 +13,10 @@ import argparse
 import json
 import datetime
 from pathlib import Path    
+import os
+import socket
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 class ParallelKNN:
     """
@@ -70,6 +74,8 @@ class ParallelKNN:
         # Statistics
         self.local_queries = 0
         self.boundary_queries = 0
+        
+        self.total_comm_time = 0.0  # Track communication overhead
     
     def load_and_distribute_data(self, embeddings, labels):
         """
@@ -229,10 +235,6 @@ class ParallelKNN:
     def exchange_ghost_regions(self):
         """
         Exchange boundary training points with neighbors
-        THIS IS LIKE GHOST CELL EXCHANGE IN POISSON SOLVER!
-        
-        Similar to:
-        MPI_Sendrecv(&uo(1, 0), m_local_n, MPI_FLOAT, m_north_prank, ...)
         """
         print(f"Rank {self.rank}: Starting ghost region exchange...")
         
@@ -247,24 +249,22 @@ class ParallelKNN:
         right_boundary_labels = self.local_training_labels[right_boundary_mask]
         
         print(f"Rank {self.rank}: Sending {len(left_boundary_data)} points left, "
-              f"{len(right_boundary_data)} points right")
+            f"{len(right_boundary_data)} points right")
         
-        # Exchange with neighbors using sendrecv
-        # CRITICAL: When sending right, receive from LEFT (and vice versa)
-        # This is exactly like Poisson ghost cell exchange!
+        comm_start = MPI.Wtime()
         
         # Send right boundary to right neighbor, receive left boundary from left neighbor
         ghost_from_left_data = self.comm.sendrecv(
             sendobj=right_boundary_data,
             dest=self.right_rank,
-            source=self.left_rank,  # Receive from LEFT when sending RIGHT
+            source=self.left_rank,
             sendtag=0,
             recvtag=0
         )
         ghost_from_left_labels = self.comm.sendrecv(
             sendobj=right_boundary_labels,
             dest=self.right_rank,
-            source=self.left_rank,  # Receive from LEFT when sending RIGHT
+            source=self.left_rank,
             sendtag=1,
             recvtag=1
         )
@@ -273,19 +273,24 @@ class ParallelKNN:
         ghost_from_right_data = self.comm.sendrecv(
             sendobj=left_boundary_data,
             dest=self.left_rank,
-            source=self.right_rank,  # Receive from RIGHT when sending LEFT
+            source=self.right_rank,
             sendtag=2,
             recvtag=2
         )
         ghost_from_right_labels = self.comm.sendrecv(
             sendobj=left_boundary_labels,
             dest=self.left_rank,
-            source=self.right_rank,  # Receive from RIGHT when sending LEFT
+            source=self.right_rank,
             sendtag=3,
             recvtag=3
         )
         
-        # Combine ghost data from both neighbors
+        comm_time = MPI.Wtime() - comm_start
+        self.total_comm_time += comm_time
+        
+        print(f"Rank {self.rank}: Ghost exchange took {comm_time*1000:.2f} ms")
+        
+        # Combine ghost data from both neighbors (rest of existing code)
         ghost_data_list = []
         ghost_labels_list = []
         
@@ -345,7 +350,7 @@ class ParallelKNN:
         # Majority vote
         unique_labels, counts = np.unique(k_nearest_labels, return_counts=True)
         predicted_label = unique_labels[np.argmax(counts)]
-        
+                
         # Track statistics
         if self.is_boundary_query(query):
             self.boundary_queries += 1
@@ -390,15 +395,16 @@ class ParallelKNN:
         else:
             return predictions, None, end_time - start_time
     
-    def print_statistics(self, out_dir='/home/markusbredberg/Scripts/parallelised_knn_classifier/produced_data'):
+    def print_statistics(self, out_dir=f'{PROJECT_ROOT}/produced_data'):
         """
         Print load balance and communication statistics
-        Similar to printing iteration counts in Poisson solver
         """
         # Gather statistics from all processes
         all_local_queries = self.comm.gather(self.local_queries, root=0)
         all_boundary_queries = self.comm.gather(self.boundary_queries, root=0)
         all_training_counts = self.comm.gather(len(self.local_training_data), root=0)
+        
+        all_comm_times = self.comm.gather(self.total_comm_time, root=0)
         
         if self.rank == 0:
             print("\n" + "="*60)
@@ -426,14 +432,27 @@ class ParallelKNN:
             print(f"  Avg training points: {avg_points:6.1f}")
             print(f"  Imbalance ratio:     {imbalance:6.2f}")
             
-            if imbalance > 2.0:
-                print(f"\n  ⚠ High load imbalance detected (ratio > 2.0)")
-                print(f"  This is EXPECTED with clustered data distributions")
-                print(f"  Report this as a finding in your analysis!")
+            print(f"\nCommunication Overhead:")
+            avg_comm_time = np.mean(all_comm_times)
+            max_comm_time = max(all_comm_times)
+            min_comm_time = min(all_comm_times)
+            
+            print(f"  Ghost exchange time:")
+            print(f"    Min:  {min_comm_time*1000:8.2f} ms")
+            print(f"    Max:  {max_comm_time*1000:8.2f} ms")
+            print(f"    Avg:  {avg_comm_time*1000:8.2f} ms")
+            
+            # Useful metric: Communication as % of total time
+            # (This is approximate - better to track total execution time separately)
+            
+            print(f"\n  Note: On multi-node runs, expect ~10x higher latency")
+            print(f"        Single node: ~1 μs per sendrecv")
+            print(f"        Multi-node:  ~10 μs per sendrecv")
+            
             
             print("="*60)
             
-            # Save detailed statistics to JSON
+            # Save statistics 
             stats = {
                 'timestamp': datetime.datetime.now().isoformat(),
                 'n_processes': self.size,
@@ -443,7 +462,10 @@ class ParallelKNN:
                 'min_points': min_points,
                 'max_points': max_points,
                 'avg_points': float(avg_points),
-                'imbalance_ratio': float(imbalance)
+                'imbalance_ratio': float(imbalance),
+                'avg_comm_time': float(avg_comm_time),
+                'max_comm_time': float(max_comm_time),
+                'comm_time_per_process': all_comm_times
             }
             
             try:
@@ -460,7 +482,7 @@ class ParallelKNN:
             print(f"✓ Statistics saved to: {out_dir}/parallel_knn_statistics.json")
 
 
-def main(out_dir='/home/markusbredberg/Scripts/parallelised_knn_classifier/produced_data',
+def main(out_dir=f'{PROJECT_ROOT}/produced_data',
          weak_scaling=False,
          balanced_partitioning=False):
     """
@@ -478,11 +500,22 @@ def main(out_dir='/home/markusbredberg/Scripts/parallelised_knn_classifier/produ
     rank = comm.Get_rank()
     size = comm.Get_size()
     
+    hostname = socket.gethostname()
+    all_hostnames = comm.gather(hostname, root=0)
+    
     if rank == 0:
         print("="*60)
         print("PARALLEL KNN WITH SPATIAL DECOMPOSITION")
         print("="*60)
         print(f"Number of MPI processes: {size}")
+        
+        unique_nodes = set(all_hostnames)
+        print(f"Running on {len(unique_nodes)} node(s):")
+        for node in sorted(unique_nodes):
+            ranks_on_node = [r for r, h in enumerate(all_hostnames) if h == node]
+            print(f"  {node}: ranks {ranks_on_node}")
+        print()
+        
         if weak_scaling:
             print("Mode: WEAK SCALING (problem size scales with processes)")
         else:
@@ -511,7 +544,7 @@ def main(out_dir='/home/markusbredberg/Scripts/parallelised_knn_classifier/produ
             embeddings = data['embeddings']
             labels = data['labels']
         except FileNotFoundError:
-            print(f"\n✗ ERROR: Training data not found!")
+            print(f"\n✗ ERROR: Training data not found!. Looked for: {data_path}")
             if weak_scaling:
                 print("Run: python generate_weak_scaling_data.py")
             else:
@@ -669,14 +702,7 @@ Examples:
   # Strong scaling with uniform partitioning (default)
   mpirun -np 4 python step2_parallel_knn.py
   
-  # Strong scaling with balanced partitioning
-  mpirun -np 4 python step2_parallel_knn.py --balanced
-  
-  # Weak scaling with uniform partitioning
-  mpirun -np 4 python step2_parallel_knn.py --weak-scaling
-  
-  # Weak scaling with balanced partitioning
-  mpirun -np 4 python step2_parallel_knn.py --weak-scaling --balanced
+  # Potential flags: --weak-scaling --balanced
         """
     )
     
@@ -685,7 +711,7 @@ Examples:
     parser.add_argument('--balanced', action='store_true',
                        help='Use balanced (data-driven) partitioning instead of uniform spatial partitioning')
     parser.add_argument('--out-dir', type=str, 
-                       default='/home/markusbredberg/Scripts/parallelised_knn_classifier/produced_data',
+                       default=f'{PROJECT_ROOT}/produced_data',
                        help='Output directory')
     
     args = parser.parse_args()

@@ -1075,5 +1075,86 @@
     "max_points": 1044,
     "avg_points": 215.75,
     "imbalance_ratio": 261.0
+  },
+  {
+    "timestamp": "2025-11-19T11:30:29.185888",
+    "n_processes": 1,
+    "local_queries": 191,
+    "boundary_queries": 7,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0
+  },
+  {
+    "timestamp": "2025-11-19T11:30:32.253896",
+    "n_processes": 2,
+    "local_queries": 126,
+    "boundary_queries": 72,
+    "training_counts": [
+      498,
+      501
+    ],
+    "min_points": 498,
+    "max_points": 501,
+    "avg_points": 499.5,
+    "imbalance_ratio": 1.0060240963855422
+  },
+  {
+    "timestamp": "2025-11-19T11:30:35.240833",
+    "n_processes": 4,
+    "local_queries": 142,
+    "boundary_queries": 56,
+    "training_counts": [
+      68,
+      430,
+      428,
+      73
+    ],
+    "min_points": 68,
+    "max_points": 430,
+    "avg_points": 249.75,
+    "imbalance_ratio": 6.323529411764706
+  },
+  {
+    "timestamp": "2025-11-19T11:30:38.242066",
+    "n_processes": 8,
+    "local_queries": 139,
+    "boundary_queries": 59,
+    "training_counts": [
+      9,
+      59,
+      169,
+      261,
+      252,
+      176,
+      62,
+      11
+    ],
+    "min_points": 9,
+    "max_points": 261,
+    "avg_points": 124.875,
+    "imbalance_ratio": 29.0
+  },
+  {
+    "timestamp": "2025-11-19T13:51:52.374321",
+    "n_processes": 1,
+    "local_queries": 191,
+    "boundary_queries": 7,
+    "training_counts": [
+      999
+    ],
+    "min_points": 999,
+    "max_points": 999,
+    "avg_points": 999.0,
+    "imbalance_ratio": 1.0,
+    "avg_comm_time": 1.3662e-05,
+    "max_comm_time": 1.3662e-05,
+    "comm_time_per_process": [
+      1.3662e-05
+    ]
   }
 ]

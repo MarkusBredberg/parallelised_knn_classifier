@@ -838,5 +838,61 @@
     "test_points": 200,
     "weak_scaling": true,
     "balanced_partitioning": true
+  },
+  {
+    "timestamp": "2025-11-19T11:30:40.815793",
+    "n_processes": 1,
+    "classification_time": 0.245141889,
+    "accuracy": 0.16,
+    "total_queries": 25,
+    "queries_per_process": 25,
+    "k": 5,
+    "n_dims": 512,
+    "training_points": 1000,
+    "test_points": 25,
+    "weak_scaling": true,
+    "balanced_partitioning": false
+  },
+  {
+    "timestamp": "2025-11-19T11:30:43.338422",
+    "n_processes": 2,
+    "classification_time": 0.24278084,
+    "accuracy": 0.24,
+    "total_queries": 50,
+    "queries_per_process": 25,
+    "k": 5,
+    "n_dims": 512,
+    "training_points": 1000,
+    "test_points": 50,
+    "weak_scaling": true,
+    "balanced_partitioning": false
+  },
+  {
+    "timestamp": "2025-11-19T11:30:46.025910",
+    "n_processes": 4,
+    "classification_time": 0.210514597,
+    "accuracy": 0.27,
+    "total_queries": 100,
+    "queries_per_process": 25,
+    "k": 5,
+    "n_dims": 512,
+    "training_points": 1000,
+    "test_points": 100,
+    "weak_scaling": true,
+    "balanced_partitioning": false
+  },
+  {
+    "timestamp": "2025-11-19T11:30:48.922295",
+    "n_processes": 8,
+    "classification_time": 0.244974335,
+    "accuracy": 0.285,
+    "total_queries": 200,
+    "queries_per_process": 25,
+    "k": 5,
+    "n_dims": 512,
+    "training_points": 1000,
+    "test_points": 200,
+    "weak_scaling": true,
+    "balanced_partitioning": false
   }
 ]
